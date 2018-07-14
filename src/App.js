@@ -16,6 +16,7 @@ class App extends Component {
         const key = "53c16a70c49aeb474b603a97f0f3400b";
         e.preventDefault();
         const city = e.target.elements.city.value;
+        console.log(e.target)
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`);
         const data = await api_call.json();
         console.log(data)
