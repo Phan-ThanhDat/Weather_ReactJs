@@ -1,36 +1,35 @@
-import React from "react";
+import React, {Component} from "react";
+import Item from "./Item";
 
-const Weather = props => (
-	<div className="weather__info">
-	 {	
-	 	props.city &&
-		<p className="weather__key"> Location:
-	 		<span className="weather__value"> { props.city }</span>
-	 	</p> 
-	 }
-	 { 	
-	 	props.temperature &&
-		<p className="weather__key"> Temperature:
-	 		<span className="weather__value"> { props.temperature }	</span>
-	 	</p> 
-	 }
-	 { 	
-	 	props.humidity &&
-		<p className="weather__key"> Humidity:
-	 		<span className="weather__value"> { props.humidity } </span>
-	 	</p> 
-	 }
-	 { 	
-	 	props.description &&
-		<p className="weather__key"> Conditions:
-	 		<span className="weather__value"> { props.description } </span>
-	 </p> 
-	 }
-	 { 
-	 	props.error &&
-		<p className="weather__error">{ props.error }</p>
-	 }
-	</div>
-);
 
+class Weather extends Component {
+
+
+    render() {
+        const elmItem = this.props.list.map((item, index) => {
+            return (
+                <Item
+                    key={item.dt}
+                    item={item}
+                    index={index} />
+            )});
+
+        return (
+            <div className="weather__info">
+                {
+                    this.props.city &&
+                    <p className="weather__key"> Location:
+                        <span className="weather__value"> { this.props.city }</span>
+                    </p>
+                }
+                {
+					elmItem && elmItem
+                }
+
+
+            </div>
+
+        );
+    }
+}
 export default Weather;
