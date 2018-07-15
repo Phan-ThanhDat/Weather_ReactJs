@@ -24,6 +24,7 @@ body {
 
 .row-container {
   display: flex;
+  height: 90vh;
 }
 .title-container {
   height: 90vh;
@@ -57,15 +58,16 @@ body {
   padding-top: 100px;
   padding-left: 50px;
   margin-left: auto;
-  width: 50%;
+  width: 60%;
   flex-grow: 1;
+  overflow: auto;
 }
 
 input[type="text"] {
   background-color: transparent;
   border: 0;
   border-bottom: solid 1px #f16051;
-  width: 30%;
+  width: 50%;
   padding-bottom: 4px;
   color: #fff !important;
   font-weight: lighter;
