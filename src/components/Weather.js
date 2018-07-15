@@ -9,10 +9,12 @@ class Weather extends Component {
         const elmItem = this.props.list.map((item, index) => {
             return (
                 <Item
+                    timeDate = {item.dt_txt}
                     key={item.dt}
                     item={item}
                     index={index} />
-            )});
+            )
+            });
 
         return (
             <div className="weather__info">

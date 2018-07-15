@@ -1,11 +1,12 @@
 import React from "react";
 
+
 const Item = props => (
     <div className="">
         {
-            props.dateTime &&
+            props.timeDate &&
             <p className="weather__key"> Date and Time:
-                <span className="weather__value"> { props.dateTime } </span>
+                <span className="weather__value"> { props.timeDate } </span>
             </p>
         }
         {
@@ -14,18 +15,18 @@ const Item = props => (
                 <span className="weather__value"> {props.item.main.temp }	</span>
             </p>
         }
-        {/*{*/}
-            {/*props.humidity &&*/}
-            {/*<p className="weather__key"> Humidity:*/}
-                {/*<span className="weather__value"> { props.humidity } </span>*/}
-            {/*</p>*/}
-        {/*}*/}
-        {/*{*/}
-            {/*props.description &&*/}
-            {/*<p className="weather__key"> Conditions:*/}
-                {/*<span className="weather__value"> { props.description } </span>*/}
-            {/*</p>*/}
-        {/*}*/}
+        {
+            props.item.humidity &&
+            <p className="weather__key"> Humidity:
+                <span className="weather__value"> { props.item.humidity } </span>
+            </p>
+        }
+        {
+            props.item.weather[0].description &&
+            <p className="weather__key"> Conditions:
+                <span className="weather__value"> { props.item.weather[0].description } </span>
+            </p>
+        }
 
     </div>
 );

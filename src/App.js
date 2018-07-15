@@ -50,7 +50,7 @@ class App extends Component {
                     <div className="container">
                         <div className="row row-container">
                             <div className="col-xs-5 title-container">
-                                <Titles />
+                                <Titles city={this.state.city}  list={this.state.list}/>
                             </div>
                             <div className="col-xs-7 form-container">
                                 <Form getWeather={this.getWeather} />
