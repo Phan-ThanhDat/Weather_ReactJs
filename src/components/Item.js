@@ -2,13 +2,19 @@ import React from "react";
 
 
 const Item = props => (
+
     <div className="">
         {
             props.timeDate &&
-            <p className="weather__key"> Date and Time:
-                <span className="weather__value"> { props.timeDate } </span>
-            </p>
+            <React.Fragment>
+                <img className = "icon-weather" src= {props.icon} alt="Weather Condition"/>
+                <p className="weather__key"> Date and Time:
+                    <span className="weather__value"> { props.timeDate } </span>
+                </p>
+            </React.Fragment>
+
         }
+
         {
             props.item.main.temp &&
             <p className="weather__key"> Temperature:

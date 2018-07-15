@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Item from "./Item";
 
+
 let currentdate = new Date();
 let dateTime = "Date: " + currentdate.getDate() + "/"
     + (currentdate.getMonth()+1)  + "/"
@@ -9,18 +10,19 @@ let dateTime = "Date: " + currentdate.getDate() + "/"
     + currentdate.getMinutes() + ":"
     + currentdate.getSeconds();
 
+
 class Titles extends Component {
 
 
     render() {
         const elmItem = this.props.list.map((item, index) => {
-
             return (( index === 0 &&
                 <Item
                     timeDate = {dateTime}
                     key={item.dt}
                     item={item}
                     index={index}
+                    icon={'http://openweathermap.org/img/w/'+item.weather[0].icon + '.png'}
                 />
             ))
 

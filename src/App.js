@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import Weather from "./components/Weather";
 import './App.css';
 
+
 class App extends Component {
     state = {
         city: '',
@@ -44,6 +45,7 @@ class App extends Component {
 
 
     return (
+
         <div>
             <div className="wrapper">
                 <div className="main">
@@ -52,8 +54,11 @@ class App extends Component {
                             <div className="col-xs-5 title-container">
                                 {
                                     this.state.list &&
-                                    <Titles city={this.state.city}  list={this.state.list}/>
+                                    <Titles city={this.state.city}  list={this.state.list}>
+
+                                    </Titles>
                                 }
+
                             </div>
                             <div className="col-xs-7 form-container">
                                 <Form getWeather={this.getWeather} />

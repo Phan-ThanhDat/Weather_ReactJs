@@ -12,7 +12,8 @@ class Weather extends Component {
                     timeDate = {item.dt_txt}
                     key={item.dt}
                     item={item}
-                    index={index} />
+                    index={index}
+                    icon={'http://openweathermap.org/img/w/'+item.weather[0].icon + '.png'}/>
             )
             });
 

@@ -85,6 +85,12 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
   -webkit-text-fill-color: #fff !important;
 }
+.icon-weather {
+  width: 120px;
+  height: auto;
+  margin-top: -32px;
+  margin-bottom: -32px;
+}
 
 button {
   border: 0;
