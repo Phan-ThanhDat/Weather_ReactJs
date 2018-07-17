@@ -14,6 +14,12 @@ class App extends Component {
     getWeather = async (e)  => {
         const key = "53c16a70c49aeb474b603a97f0f3400b";
         e.preventDefault();
+        let a = e.target.elements;
+        let b = a.name;
+        let c = a.value;
+        console.log('a',a)
+        console.log('b',b)
+        console.log('c',c)
         const city = e.target.elements.city.value;
         console.log(e.target)
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`);
